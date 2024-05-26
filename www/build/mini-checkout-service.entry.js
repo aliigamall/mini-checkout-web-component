@@ -5,7 +5,7 @@ const MiniCheckoutService = class {
         registerInstance(this, hostRef);
     }
     render() {
-        return (h(Host, { key: '02af0281f66a0530df57c7387865c0e93aaad338' }, h("slot", { key: '243701c8b134620f46ae652544f058739c8dd2b3' })));
+        return (h(Host, { key: '6a0a0a607fad086fdefcfed0bd7f7c0df962ec28' }, h("slot", { key: '3cfc4c7faeb59bc0ccc033e82ba206bd8bed8ae1' })));
     }
 };
 

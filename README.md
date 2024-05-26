@@ -122,6 +122,11 @@ Check out this [Live Demo](https://stackblitz.com/edit/vitejs-vite-b6zuds?file=s
 |   │   │   ├── logo.css
 |   │   │   └── logo.e2e.ts
 |   │   │   └── logo.spec.ts
+|   │   ├── logo-text/
+|   │   │   ├── logo.tsx
+|   │   │   ├── logo.css
+|   │   │   └── logo.e2e.ts
+|   │   │   └── logo.spec.ts
 |   │   ├── cart-header/
 |   │   │   ├── cart-header.tsx
 |   │   │   ├── cart-header.css
@@ -138,11 +143,11 @@ Check out this [Live Demo](https://stackblitz.com/edit/vitejs-vite-b6zuds?file=s
 |   │   │   └── apply-coupon.e2e.ts
 |   │   │   └── apply-coupon.spec.ts
 │   │   ├── views/
-|   │   │   ├── cart-items/
-|   │   │   │   ├── cart-items.tsx
-|   │   │   │   ├── cart-items.css
-|   │   │   │   └── cart-items.e2e.ts
-|   │   │   │   └── cart-items.spec.ts
+|   │   │   ├── checkout-items/
+|   │   │   │   ├── checkout-items.tsx
+|   │   │   │   ├── checkout-items.css
+|   │   │   │   └── checkout-items.e2e.ts
+|   │   │   │   └── checkout-items.spec.ts
 |   │   │   ├── shipping-options/
 |   │   │   │   ├── shipping-options.tsx
 |   │   │   │   ├── shipping-options.css

@@ -1,5 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { MiniCheckoutService } from '../mini-checkout-service';
+import { MiniCheckoutService } from './mini-checkout-service';
 
 describe('mini-checkout-service', () => {
   it('renders', async () => {
