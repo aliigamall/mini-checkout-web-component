@@ -112,3 +112,62 @@ export default App;
 ```
 
 Check out this [Live Demo](https://stackblitz.com/edit/vitejs-vite-b6zuds?file=src%2FApp.tsx).
+
+# Project structure
+```
+├── src/
+│   ├── components/
+|   │   ├── logo/
+|   │   │   ├── logo.tsx
+|   │   │   ├── logo.css
+|   │   │   └── logo.e2e.ts
+|   │   │   └── logo.spec.ts
+|   │   ├── cart-header/
+|   │   │   ├── cart-header.tsx
+|   │   │   ├── cart-header.css
+|   │   │   └── cart-header.e2e.ts
+|   │   │   └── cart-header.spec.ts
+|   │   ├── checkout-row/
+|   │   │   ├── checkout-row.tsx
+|   │   │   ├── checkout-row.css
+|   │   │   └── checkout-row.e2e.ts
+|   │   │   └── checkout-row.spec.ts
+|   │   ├── apply-coupon/
+|   │   │   ├── apply-coupon.tsx
+|   │   │   ├── apply-coupon.css
+|   │   │   └── apply-coupon.e2e.ts
+|   │   │   └── apply-coupon.spec.ts
+│   │   ├── views/
+|   │   │   ├── cart-items/
+|   │   │   │   ├── cart-items.tsx
+|   │   │   │   ├── cart-items.css
+|   │   │   │   └── cart-items.e2e.ts
+|   │   │   │   └── cart-items.spec.ts
+|   │   │   ├── shipping-options/
+|   │   │   │   ├── shipping-options.tsx
+|   │   │   │   ├── shipping-options.css
+|   │   │   │   └── shipping-options.e2e.ts
+|   │   │   │   └── shipping-options.spec.ts
+|   │   │   ├── checkout-summary/
+|   │   │   │   ├── checkout-summary.tsx
+|   │   │   │   ├── checkout-summary.css
+|   │   │   │   └── checkout-summary.e2e.ts
+|   │   │   │   └── checkout-summary.spec.ts
+|   │   │   ├── order-confirmation/
+|   │   │   │   ├── order-confirmation.tsx
+|   │   │   │   ├── order-confirmation.css
+|   │   │   │   └── order-confirmation.e2e.ts
+|   │   │   │   └── order-confirmation.spec.ts
+│   ├── services/
+│   │   ├── api-service.ts
+│   ├── utils/
+│   │   ├── types.ts
+│   ├── global/
+│   │   ├── styles.scss
+│   │   ├── styles.css
+│   ├── index.html
+│   ├── utils.ts
+├── stencil.config.ts
+├── package.json
+└── README.md
+```
