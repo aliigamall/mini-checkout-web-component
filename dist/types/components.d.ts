@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "./stencil-public-runtime";
 export namespace Components {
+    interface MiniCheckoutService {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +24,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLMiniCheckoutServiceElement extends Components.MiniCheckoutService, HTMLStencilElement {
+    }
+    var HTMLMiniCheckoutServiceElement: {
+        prototype: HTMLMiniCheckoutServiceElement;
+        new (): HTMLMiniCheckoutServiceElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +37,13 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "mini-checkout-service": HTMLMiniCheckoutServiceElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface MiniCheckoutService {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +59,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "mini-checkout-service": MiniCheckoutService;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +67,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "mini-checkout-service": LocalJSX.MiniCheckoutService & JSXBase.HTMLAttributes<HTMLMiniCheckoutServiceElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
