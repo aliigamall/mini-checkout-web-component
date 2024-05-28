@@ -5,70 +5,62 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { MatchResults } from "@stencil-community/router";
 export namespace Components {
-    interface MiniCheckoutService {
+    interface AppHome {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface AppProfile {
+        "match": MatchResults;
+    }
+    interface AppRoot {
     }
 }
 declare global {
-    interface HTMLMiniCheckoutServiceElement extends Components.MiniCheckoutService, HTMLStencilElement {
+    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
     }
-    var HTMLMiniCheckoutServiceElement: {
-        prototype: HTMLMiniCheckoutServiceElement;
-        new (): HTMLMiniCheckoutServiceElement;
+    var HTMLAppHomeElement: {
+        prototype: HTMLAppHomeElement;
+        new (): HTMLAppHomeElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLAppProfileElement: {
+        prototype: HTMLAppProfileElement;
+        new (): HTMLAppProfileElement;
+    };
+    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
+    }
+    var HTMLAppRootElement: {
+        prototype: HTMLAppRootElement;
+        new (): HTMLAppRootElement;
     };
     interface HTMLElementTagNameMap {
-        "mini-checkout-service": HTMLMiniCheckoutServiceElement;
-        "my-component": HTMLMyComponentElement;
+        "app-home": HTMLAppHomeElement;
+        "app-profile": HTMLAppProfileElement;
+        "app-root": HTMLAppRootElement;
     }
 }
 declare namespace LocalJSX {
-    interface MiniCheckoutService {
+    interface AppHome {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface AppProfile {
+        "match": MatchResults;
+    }
+    interface AppRoot {
     }
     interface IntrinsicElements {
-        "mini-checkout-service": MiniCheckoutService;
-        "my-component": MyComponent;
+        "app-home": AppHome;
+        "app-profile": AppProfile;
+        "app-root": AppRoot;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "mini-checkout-service": LocalJSX.MiniCheckoutService & JSXBase.HTMLAttributes<HTMLMiniCheckoutServiceElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
+            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
         }
     }
 }

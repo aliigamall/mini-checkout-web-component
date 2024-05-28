@@ -1,26 +1,29 @@
 import { Config } from '@stencil/core';
+import { postcss } from '@stencil/postcss';
+import tailwind from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
+
+
+// https://stenciljs.com/docs/config
 
 export const config: Config = {
-  namespace: 'mini-checkout',
+  globalStyle: 'src/global/app.css',
+  globalScript: 'src/global/app.ts',
+  plugins: [
+    postcss({
+      plugins: [
+        tailwind(),
+        autoprefixer()
+      ]
+    })
+  ],
+  taskQueue: 'async',
   outputTargets: [
     {
-      type: 'dist',
-      esmLoaderPath: '../loader',
-    },
-    {
-      type: 'dist-custom-elements',
-      customElementsExportBehavior: 'auto-define-custom-elements',
-      externalRuntime: false,
-    },
-    {
-      type: 'docs-readme',
-    },
-    {
       type: 'www',
-      serviceWorker: null, // disable service workers
+      // comment the following line to disable service workers in production
+      serviceWorker: null,
+      baseUrl: 'https://myapp.local/',
     },
   ],
-  testing: {
-    browserHeadless: "new",
-  },
 };

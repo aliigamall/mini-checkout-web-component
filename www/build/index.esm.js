@@ -1,13 +1,8 @@
-export { f as format } from './utils-11fcde98.js';
+import { A as ActiveRouter } from './active-router-6ecbf67a.js';
+import './match-path-02f6df12.js';
+import './index-c37bab2d.js';
+import './location-utils-6419c2b3.js';
 
-/**
- * @fileoverview entry point for your component library
- *
- * This is the entry point for your component library. Use this file to export utilities,
- * constants or data structure that accompany your components.
- *
- * DO NOT use this file to export your components. Instead, use the recommended approaches
- * to consume components of this package as outlined in the `README.md`.
- */
-
-//# sourceMappingURL=index.esm.js.map
+function injectHistory(Component) {
+    ActiveRouter.injectProps(Component, ['history', 'location']);
+}
